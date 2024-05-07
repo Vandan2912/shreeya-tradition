@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import clsx from "clsx";
+import localFont from 'next/font/local'
+import Navbar from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+// const rubik = Rubik({ subsets: ["latin"] });
+// Font files can be colocated inside of `pages`
+const Calton = localFont({ src: '../public/fonts/Calton Elegance Sans-Regular.otf' })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, "relative")}>
+      <body className={clsx(Calton.className, "relative")}>
         <Navbar />
         {children}
       </body>
