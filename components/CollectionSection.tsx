@@ -12,7 +12,7 @@ const CollectionSection = () => {
         <span className="">Collection</span>
       </div>
       <div className="grid grid-cols-4 gap-20">
-        <div className="col-span-2 bg-orange-400">
+        <div className="col-span-2">
           {/* Initial Space */}
           <div className="h-[30vh] w-full"></div>
           <CollectionCard
@@ -23,7 +23,7 @@ const CollectionSection = () => {
             side={COLLECTIONCARDSIDE.RIGHT}
           />
         </div>
-        <div className="col-span-2 bg-slate-300">
+        <div className="col-span-2">
           <CollectionCard
             title1="Inspiration with"
             title2="necklaces"
