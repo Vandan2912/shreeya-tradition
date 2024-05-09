@@ -29,15 +29,15 @@ const HeroSection = () => {
             />
           </button>
         </div>
-        <div className="col-span-3">
-          <div className="object-contain w-full h-full relative">
-            <Image src={"/assets/1.jpg"} alt="1" layout="fill" />
+        <div className="col-span-3 flex items-center">
+          <div className="object-contain w-full h-3/4 relative">
+            <Image src={"/assets/earrings.jpg"} alt="1" layout="fill" />
           </div>
         </div>
         <div className="col-span-2">
           <div className="object-contain w-full h-full relative ">
             <Image
-              src={"/assets/2.jpg"}
+              src={"/assets/IMG_7059.jpg"}
               alt="2"
               layout="fill"
               className="rounded-ss-full rounded-se-full !h-fit !top-[50%] translate-y-[-50%]"

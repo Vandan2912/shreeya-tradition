@@ -18,7 +18,7 @@ const CollectionSection = () => {
           <CollectionCard
             title1="Rings for joyful"
             title2="Connection"
-            image="/assets/ring.jpg"
+            image="/assets/rings.jpg"
             link=""
             side={COLLECTIONCARDSIDE.RIGHT}
           />
@@ -27,7 +27,7 @@ const CollectionSection = () => {
           <CollectionCard
             title1="Inspiration with"
             title2="necklaces"
-            image="/assets/ring.jpg"
+            image="/assets/necklace.jpg"
             link=""
             side={COLLECTIONCARDSIDE.LEFT}
             roundedImage={true}
@@ -35,10 +35,9 @@ const CollectionSection = () => {
           <CollectionCard
             title1="Discover Amazing"
             title2="Earings"
-            image="/assets/ring.jpg"
+            image="/assets/earring.jpg"
             link=""
             side={COLLECTIONCARDSIDE.RIGHT}
-            roundedImage={true}
           />
         </div>
       </div>
