@@ -10,7 +10,7 @@ const rubik = Rubik({
 
 const Navbar = () => {
   return (
-    <header className={clsx(rubik.className)}>
+    <header className={clsx(rubik.className, "relative z-10")}>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8"
         aria-label="Global"

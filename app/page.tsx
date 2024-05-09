@@ -1,3 +1,4 @@
+import CollexctionSection from "@/components/CollectionSection";
 import HeroSection from "@/components/HeroSection";
 import clsx from "clsx";
 
@@ -9,6 +10,7 @@ export default function Home() {
       )}
     >
       <HeroSection />
+      <CollexctionSection />
     </main>
   );
 }

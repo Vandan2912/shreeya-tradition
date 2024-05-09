@@ -1,5 +1,6 @@
 import { ArrowLeftEndOnRectangleIcon } from "@heroicons/react/20/solid";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import React from "react";
 import {
   BiArrowFromLeft,
@@ -9,17 +10,21 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="w-full" style={{ height: "calc(100vh - 5.75rem)" }}>
-      <div className="grid grid-cols-7 gap-4">
-        <div className="col-span-4 p-20 text-right">
-          <p className="text-7xl">Traditions Meets</p>
-          <p className="text-7xl mr-5">New Style</p>
-          <p className="mt-10 ms-28 font-rubik text-left">
+    <section
+      className="w-full px-10 relative"
+      style={{ height: "calc(100vh - 5.75rem)" }}
+    >
+      <div className="bg-lightGreen absolute right-0 top-[-5.75rem] h-screen w-1/3"></div>
+      <div className="grid grid-cols-12 gap-4">
+        <div className="col-span-7 py-20 px-14 text-right">
+          <p className="text-[5rem]">Traditions Meets</p>
+          <p className="text-[5rem] mr-5">New Style</p>
+          <p className="mt-10 ms-20 font-rubik text-left">
             Anyone can get dressed up and glamorous, but it is how <br /> people
             dress in their days off that.
           </p>
-          <button className="font-rubik bg-rani text-lightCream px-5 py-3 rounded-full flex justify-center items-center gap-3 ms-28 mt-10">
-            See All{" "}
+          <button className="font-rubik bg-rani text-lightCream px-5 py-3 rounded-full flex justify-center items-center gap-3 ms-20 mt-10 hover:scale-110 transition">
+            See All
             <BiSolidArrowToRight
               style={{
                 height: 20,
@@ -28,8 +33,21 @@ const HeroSection = () => {
             />
           </button>
         </div>
-        <div className="col-span-2">07</div>
-        <div className="col-span-1">07</div>
+        <div className="col-span-3">
+          <div className="object-contain w-full h-full relative">
+            <Image src={"/assets/1.jpg"} alt="1" layout="fill" />
+          </div>
+        </div>
+        <div className="col-span-2">
+          <div className="object-contain w-full h-full relative ">
+            <Image
+              src={"/assets/2.jpg"}
+              alt="2"
+              layout="fill"
+              className="rounded-ss-full rounded-se-full !h-fit !top-[50%] translate-y-[-50%]"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
