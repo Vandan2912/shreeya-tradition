@@ -16,15 +16,15 @@ const config: Config = {
       backgroundColor: {
         lightCream: "#FFF9F4",
         lightGreen: "#F6E7D7",
-        rani: "#62021C",
+        rani: "#7B0323",
       },
       colors: {
-        rani: "#62021C",
+        rani: "#7B0323",
         lightCream: "#FFF9F4",
       },
       fontFamily: {
         rubik: "Rubik",
-      }
+      },
     },
   },
   plugins: [],

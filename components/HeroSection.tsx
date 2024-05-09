@@ -1,10 +1,6 @@
-import { ArrowLeftEndOnRectangleIcon } from "@heroicons/react/20/solid";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import React from "react";
 import {
-  BiArrowFromLeft,
-  BiArrowToRight,
   BiSolidArrowToRight,
 } from "react-icons/bi";
 
@@ -17,7 +13,7 @@ const HeroSection = () => {
       <div className="bg-lightGreen absolute right-0 top-[-5.75rem] h-screen w-1/3"></div>
       <div className="grid grid-cols-12 gap-4">
         <div className="col-span-7 py-20 px-14 text-right">
-          <p className="text-[5rem]">Traditions Meets</p>
+          <p className="text-[5rem]">Tradition Meets</p>
           <p className="text-[5rem] mr-5">New Style</p>
           <p className="mt-10 ms-20 font-rubik text-left">
             Anyone can get dressed up and glamorous, but it is how <br /> people
