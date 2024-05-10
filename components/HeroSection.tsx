@@ -35,9 +35,9 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="col-span-2">
-          <div className="object-contain w-full h-full relative ">
+          <div className="object-contain w-full h-full relative">
             <Image
-              src={"/assets/IMG_7059.jpg"}
+              src={"/assets/IMG_1344.jpg"}
               alt="2"
               layout="fill"
               className="rounded-ss-full rounded-se-full !h-fit !top-[50%] translate-y-[-50%]"
