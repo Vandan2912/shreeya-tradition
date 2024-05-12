@@ -10,7 +10,7 @@ const rubik = Rubik({
 
 const Navbar = () => {
   return (
-    <header className={clsx(rubik.className, "relative z-10")}>
+    <header className={clsx(rubik.className, "sticky top-0 bg-lightCream")}>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8"
         aria-label="Global"
@@ -37,9 +37,9 @@ const Navbar = () => {
           </a>
         </div>
         <div className="flex flex-1 justify-end gap-8">
-          <BiSearch style={{ height: 20, width: 20 }} />
-          <BiHeart style={{ height: 20, width: 20 }} />
-          <BiShoppingBag style={{ height: 20, width: 20 }} />
+          <BiSearch style={{ height: 20, width: 20 }} className="relative z-30 cursor-pointer" />
+          <BiHeart style={{ height: 20, width: 20 }} className="relative z-30 cursor-pointer" />
+          <BiShoppingBag style={{ height: 20, width: 20 }} className="relative z-30 cursor-pointer" />
         </div>
       </nav>
     </header>
