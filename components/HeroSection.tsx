@@ -7,10 +7,10 @@ import {
 const HeroSection = () => {
   return (
     <section
-      className="w-full px-10 relative"
+      className="w-full px-10 bg-lightCream"
       style={{ height: "calc(100vh - 5.75rem)" }}
     >
-      <div className="bg-lightGreen absolute right-0 top-[-5.75rem] h-screen w-1/3"></div>
+      <div className="bg-lightGreen absolute right-0 top-0 h-screen w-1/3 z-20"></div>
       <div className="grid grid-cols-12 gap-4">
         <div className="col-span-7 py-20 px-14 text-right">
           <p className="text-[5rem]">Tradition Meets</p>

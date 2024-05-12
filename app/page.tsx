@@ -1,5 +1,7 @@
+import AboutSection from "@/components/AboutSection";
 import CollexctionSection from "@/components/CollectionSection";
 import HeroSection from "@/components/HeroSection";
+import NewArrival from "@/components/NewArrival";
 import clsx from "clsx";
 
 export default function Home() {
@@ -11,6 +13,8 @@ export default function Home() {
     >
       <HeroSection />
       <CollexctionSection />
+      <NewArrival />
+      <AboutSection />
     </main>
   );
 }

@@ -5,7 +5,7 @@ import { COLLECTIONCARDSIDE } from "../constants/index";
 
 const CollectionSection = () => {
   return (
-    <div className="h-screen w-full object-cover px-10 py-20">
+    <section className="min-h-screen w-full object-cover px-10 py-20">
       <div className="text-5xl text-rani text-center mb-14">
         <span className="">Discover Jewellery</span>
         <br />
@@ -41,7 +41,7 @@ const CollectionSection = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

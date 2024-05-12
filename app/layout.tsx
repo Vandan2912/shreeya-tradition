@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import clsx from "clsx";
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
+import Head from "next/head";
 
 // const rubik = Rubik({ subsets: ["latin"] });
 // Font files can be colocated inside of `pages`
-const Calton = localFont({ src: '../public/fonts/Calton Elegance Sans-Regular.otf' })
+const Calton = localFont({
+  src: "../public/fonts/Calton Elegance Sans-Regular.otf",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
