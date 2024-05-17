@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -18,14 +18,16 @@ const config = {
       },
     },
     extend: {
-        backgroundColor: {
-            lightCream: "#FFF9F4",
-            lightGreen: "#F6E7D7",
-            rani: "#7B0323",
-          },
-      colors: {
+      minHeight: {
+        section: "calc(100vh - 96px)",
+      },
+      backgroundColor: {
+        lightpink: "#fdeeeb",
         rani: "#7B0323",
-        lightCream: "#FFF9F4",
+      },
+      colors: {
+        lightpink: "#fdeeeb",
+        rani: "#7B0323",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -62,6 +64,14 @@ const config = {
       },
       fontFamily: {
         rubik: "Rubik",
+        imfell: "IM Fell English SC",
+        cinzel: "Cinzel",
+        roboto: "Roboto",
+        robotoCondensed: "Roboto Condensed",
+      },
+      fontSize: {
+        small: "0.93333333333333em",
+        productName: "1.7333333333333rem",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -85,6 +95,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
