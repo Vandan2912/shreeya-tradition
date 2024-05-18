@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import clsx from "clsx";
-import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
-import Head from "next/head";
 import { Roboto } from "next/font/google";
-import 'react-tooltip/dist/react-tooltip.css'
+import "react-tooltip/dist/react-tooltip.css";
+import Footer from "@/components/Footer";
 
 const roboto = Roboto({
   subsets: ["cyrillic"],
@@ -27,6 +26,7 @@ export default function RootLayout({
       <body className={clsx(roboto.className, "relative")}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

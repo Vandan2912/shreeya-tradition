@@ -4,8 +4,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <>
-      <div className="w-full bg-lightpink pt-16 pb-24 grid grid-cols-4 max-w-[1300px] text-start">
+    <div className="w-full bg-lightpink">
+      <div className="pt-16 pb-24 grid grid-cols-4 max-w-[1300px] mx-auto text-start">
         <Image
           src={"/assets/logo.svg"}
           alt="logo"
@@ -81,12 +81,12 @@ const Footer = () => {
       <div className="w-full">
         <div className="h-px w-full bg-rani opacity-15"></div>
         <Link href="#">
-          <p className="max-w-[1300px] mx-auto text-center font-robotoCondensed text-[rgba(0,0,0,0.5)] my-8">
+          <p className="max-w-[1300px] mx-auto text-center font-robotoCondensed text-[rgba(0,0,0,0.5)] py-8">
             Copyright © 2024 Shreeya Traditions | Powered by Shreeya Traditions
           </p>
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 
