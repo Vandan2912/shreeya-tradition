@@ -4,8 +4,16 @@ import { Dialog, Disclosure } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 import { useState } from "react";
-import { BiHeart, BiSearch, BiShoppingBag } from "react-icons/bi";
+import { BiHeart, BiSearch, BiShoppingBag, BiUser } from "react-icons/bi";
 import { FaBars } from "react-icons/fa";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "./ui/navigation-menu";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,11 +39,10 @@ const Navbar = () => {
         </div>
         <div className="flex">
           <a href="#" className="-m-1.5 p-1.5 flex items-center">
-            <img className="h-20 w-auto" src="/assets/logo.svg" alt="" />
             <div className="flex flex-col items-center justify-center">
-              <span className="font-black text-2xl font-cinzel">Shreeya</span>
-              <span className="font-black text-base font-imfell">
-                Traditions
+              <span className="text-3xl font-cinzel font-medium">Shreeya</span>
+              <span className="text-sm font-robotoCondensed font-light tracking-widest text-[#ABABAB] upp">
+                Traditions Store
               </span>
             </div>
           </a>
@@ -45,10 +52,33 @@ const Navbar = () => {
             style={{ height: 20, width: 20 }}
             className="relative z-30 cursor-pointer"
           />
-          <BiHeart
-            style={{ height: 20, width: 20 }}
-            className="relative z-30 cursor-pointer"
-          />
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>
+                  <BiUser
+                    style={{ height: 20, width: 20 }}
+                    className="relative z-30 cursor-pointer"
+                  />
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  {/* <NavigationMenuLink> */}
+                  <div className="flex flex-col gap-1 p-4 w-[400px] lg:w-[300px]">
+                    <p className="text-sm font-bold">Welcome</p>
+                    <p className="text-sm">
+                      To access account and manage orders
+                    </p>
+                    <Link href="auth">
+                      <Button className="uppercase text-[#B1164F] w-fit bg-white border hover:border-[#B1164F] hover:bg-white mt-3">
+                        Login / Signup
+                      </Button>
+                    </Link>
+                  </div>
+                  {/* </NavigationMenuLink> */}
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
           <BiShoppingBag
             style={{ height: 20, width: 20 }}
             className="relative z-30 cursor-pointer"

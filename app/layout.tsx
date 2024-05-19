@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { Roboto } from "next/font/google";
 import "react-tooltip/dist/react-tooltip.css";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const roboto = Roboto({
   subsets: ["cyrillic"],
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
