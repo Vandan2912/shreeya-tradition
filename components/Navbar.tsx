@@ -14,9 +14,15 @@ import {
   NavigationMenuTrigger,
 } from "./ui/navigation-menu";
 import { Button } from "./ui/button";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  if (pathname === "/auth") {
+    return <></>;
+  }
+
   return (
     <header className="sticky top-0 bg-white z-50">
       <nav

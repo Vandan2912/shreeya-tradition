@@ -1,8 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Footer = () => {
+    const pathname = usePathname();
+    if (pathname === "/auth") {
+      return <></>;
+    }
   return (
     <div className="w-full bg-lightpink">
       <div className="pt-16 pb-24 grid grid-cols-4 max-w-[1300px] mx-auto text-start">

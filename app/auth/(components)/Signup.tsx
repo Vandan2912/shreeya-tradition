@@ -85,7 +85,7 @@ const Signup = () => {
     <>
       <h1 className="text-2xl font-bold mb-4">Signup</h1>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
           <FormField
             control={form.control}
             name="name"
@@ -106,7 +106,7 @@ const Signup = () => {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="Email ID" {...field} />
+                  <Input placeholder="Email id" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -119,7 +119,7 @@ const Signup = () => {
               <FormItem>
                 <FormLabel>Number</FormLabel>
                 <FormControl>
-                  <Input placeholder="Mobile NO." {...field} maxLength={10} />
+                  <Input placeholder="Mobile no" {...field} maxLength={10} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
