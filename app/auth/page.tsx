@@ -8,7 +8,7 @@ const page = () => {
   const [signIn, setSignIn] = useState(true);
 
   return (
-    <div className="bg-lightpink h-screen w-full text-start flex justify-center items-center">
+    <div className="bg-lightpink h-screen w-full text-start flex justify-center items-center p-4">
       <div className="bg-white rounded-3xl p-8 w-[400px] mx-auto">
         {signIn ? (
           <Signin setSignIn={setSignIn} />
