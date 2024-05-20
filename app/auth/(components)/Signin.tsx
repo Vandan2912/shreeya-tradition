@@ -23,12 +23,6 @@ const indianMobileNumberRegex = /^[6-9]\d{9}$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Invalid email address.",
-  }),
   mobile: z.string().regex(indianMobileNumberRegex, {
     message: "Invalid Indian mobile number.",
   }),
@@ -38,14 +32,12 @@ const formSchema = z.object({
   }),
 });
 
-const Signup = ({ setSignIn }: { setSignIn: (arg0: boolean) => void }) => {
+const Signin = ({ setSignIn }: { setSignIn: (arg0: boolean) => void }) => {
   const router = useRouter();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
-      email: "",
       mobile: "",
       password: "",
     },
@@ -55,13 +47,11 @@ const Signup = ({ setSignIn }: { setSignIn: (arg0: boolean) => void }) => {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     const signupData = {
-      name: values.name,
-      email: values.email,
-      number: values.mobile,
+      mobile: parseInt(values.mobile),
       password: values.password,
     };
     axiosInstance
-      .post("/auth/register", signupData)
+      .post("/auth/login", signupData)
       .then((response) => {
         console.log(response);
         toast({
@@ -83,35 +73,9 @@ const Signup = ({ setSignIn }: { setSignIn: (arg0: boolean) => void }) => {
 
   return (
     <>
-      <h1 className="text-2xl font-bold mb-4">Signup</h1>
+      <h1 className="text-2xl font-bold mb-4">Signin</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Name</FormLabel>
-                <FormControl>
-                  <Input placeholder="Full name" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl>
-                  <Input placeholder="Email id" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
           <FormField
             control={form.control}
             name="mobile"
@@ -142,18 +106,18 @@ const Signup = ({ setSignIn }: { setSignIn: (arg0: boolean) => void }) => {
         </form>
       </Form>
       <div className="mt-10 text-center text-sm text-gray-700 flex gap-3 justify-center items-center">
-        <span>Already have an account?</span>
+        <span>Don't have an account?</span>
         <span
           className="underline hover:text-rani cursor-pointer"
           onClick={() => {
-            setSignIn(true);
+            setSignIn(false);
           }}
         >
-          Sign in →
+          Sign up →
         </span>
       </div>
     </>
   );
 };
 
-export default Signup;
+export default Signin;
